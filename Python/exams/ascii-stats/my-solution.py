@@ -7,9 +7,13 @@ def read_file(filename):
 
 
 def get_inputs():
-    xy = input("Please, enter the coordinates (x,y): ")
-    square = input("Please, enter the square size: ")
-    return [int(x) for x in xy.split(",")], int(square)
+    try:
+        xy = input("Please, enter the coordinates (x,y): ")
+        square = input("Please, enter the square size: ")
+        return [int(x) for x in xy.split(",")], int(square)
+    except:
+        print("Wrong Input")
+        return get_inputs()
 
 
 def main():
@@ -25,7 +29,8 @@ def main():
         or xy[1] > columns
         or xy[1] + square > columns
     ):
-        exit("ERROR!! The square to analyze is out of limits.")
+        print("ERROR!! The square to analyze is out of limits.")
+        return main()
 
     img = dict()
     for i, row in enumerate(splitted_data):
@@ -38,7 +43,7 @@ def main():
                         img[char] = 1
 
     for s in sorted(img, key=lambda k: img[k], reverse=True):
-        print(f"{s} -> {(img[s] / square ** 2) * 100}%")
+        print(f"{s} -> {(img[s] / square ** 2) * 100:.1f}%")
 
 
 if __name__ == "__main__":
