@@ -1,0 +1,7 @@
+Milan:MIPN160:6:120.00
+Turin:T0123:12:180.00
+Barcelona:BRC13:13:80.00
+Amsterdam:DEOL1:15:60.00
+Madrid Center:MAD33:10:110.00
+Eindhoven:EIND:18:55.00
+Madrid Palace:MADP:12:105.00
