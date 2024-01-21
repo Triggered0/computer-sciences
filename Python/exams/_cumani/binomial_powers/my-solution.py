@@ -23,7 +23,7 @@ def pascalTriangle(n: int):
 
 def main():
     data = read_file("powers.txt").splitlines()
-    a, b = [int(x) for x in data[0].split()]
+    a, b = [float(x) for x in data[0].split()]
     powers = data[1:]
 
     print(f"Powers of ({a}x {"+"if b > 0 else "-"} {abs(b)}y)^N")
@@ -33,9 +33,10 @@ def main():
         triangle = pascalTriangle(power)[power]
         arr = []
         for i in range(power+1):
+            coeff = triangle[i] * (a ** (power - i)) * (b ** i)
             arr.append(
-                f"({(triangle[i] * (a ** (power - i)) * (b ** i))} x{f"^{power-i}"} y{f"^{i}"})")
-        print(" + ".join(arr))
+                f"{"+ "if coeff > 0 else "- "}{abs(coeff)}{f" x^{power-i}" if power-i != 0 else ""}{f" y^{i}" if i != 0 else ""}")
+        print(" ".join(arr))
 
 
 if __name__ == "__main__":
