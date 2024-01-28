@@ -1,4 +1,4 @@
-FILE = "player_stats.csv"
+FILE = "Exams/Soccer/player_stats.csv"
 teams = dict()
 
 
@@ -60,7 +60,7 @@ def calculate_effs(data):
 
 def sort_eff_team(x):
     total = []
-    for _, eff in x[1]["players"][:3]:
+    for _, eff in sorted(x[1]["players"], key=lambda x: x[1], reverse=True)[:3]:
         total.append(eff)
     return sum(total)
 
