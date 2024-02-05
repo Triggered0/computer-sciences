@@ -8,8 +8,8 @@ def read_file(file):
 
 def main():
     events = dict()
-    events_data = read_file("calendar/events.txt")
-    commands = read_file("calendar/commands.txt").splitlines()
+    events_data = read_file("events.txt")
+    commands = read_file("commands.txt").splitlines()
 
     for event in events_data.splitlines():
         day, hour, event_name = event.split(";")
