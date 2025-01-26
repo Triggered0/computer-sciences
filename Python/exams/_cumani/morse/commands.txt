@@ -1,0 +1,2 @@
+e text.txt
+d encoded.txt

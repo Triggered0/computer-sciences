@@ -1,3 +1,0 @@
-Hair Color = Blonde
-Hair Length = Short
-Glasses = YES

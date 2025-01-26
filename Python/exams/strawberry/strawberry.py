@@ -1,6 +1,11 @@
 # Copyright © 2022 Giovanni Squillero <giovanni.squillero@polito.it>
+<<<<<<< HEAD
+# Free for personal or classroom use; see 'LICENSE.md' for details.
+# https://github.com/squillero/computer-sciences
+=======
 # https://github.com/squillero/computer-sciences
 # Free under certain conditions — see the license for details.
+>>>>>>> 89fb55792fc0bb2c474d460a143d13ae9b20111d
 
 from string import punctuation
 

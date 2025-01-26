@@ -1,3 +1,0 @@
-Gender = Man
-Hair Length = Short
-Beard = YES
