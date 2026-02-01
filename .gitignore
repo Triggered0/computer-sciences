@@ -163,3 +163,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Poetry
+poetry.lock
+
+# uv
+uv.lock
+.python-version
